@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="About | Nurlan Kurmanbekov"
+  description="About Nurlan Kurmanbekov Software Engineer"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Read below to learn more about myself and my background."
+      >
+        <!-- <img
+          width="1553"
+          height="873"
+          src="/assets/ava3.jpeg"
+          alt="Jeanine White at work with a colleague"
+        /> -->
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p style="margin-bottom: 5px;">
+            Passionate about crafting seamless and engaging web experiences, I
+            am a dedicated Frontend Developer Software Engineer with a robust
+            skill set in Angular, React, TypeScript, RxJS, Redux, and
+            JavaScript. With a wealth of experience in developing a diverse
+            range of projects, including web applications, libraries, and CRM
+            systems, I thrive in transforming innovative ideas into functional
+            and user-friendly digital solutions.
+          </p>
+          <p style="margin-bottom: 5px;">
+            My journey in the world of software engineering has equipped me with
+            a keen eye for detail, a commitment to best practices, and a deep
+            understanding of the ever-evolving landscape of frontend
+            technologies. I take pride in my ability to seamlessly integrate
+            cutting-edge frameworks and technologies to create responsive,
+            performant, and visually appealing user interfaces.
+          </p>
+          <p style="margin-bottom: 5px;">
+            Having contributed to the success of various web-based projects, I
+            bring not only technical expertise but also a collaborative and
+            solution-oriented mindset to the table. Whether it's navigating
+            complex challenges, optimizing code for efficiency, or staying
+            abreast of industry trends, I am dedicated to delivering
+            high-quality results that exceed expectations.
+          </p>
+          <p style="margin-bottom: 5px;">
+            In addition to my technical prowess, I am adept at effective
+            communication and thrive in collaborative environments. My passion
+            for continuous learning ensures that I stay ahead in an
+            ever-changing tech ecosystem, always seeking to enhance my skills
+            and contribute meaningfully to the success of any project.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>
+            Bachelor's degree in <b
+              >Computer Science and Technology Education</b>
+          </p>
+          <p>Hacettepe University, Ankara 2018</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>officia unde omnis</p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
